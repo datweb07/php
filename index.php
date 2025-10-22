@@ -108,4 +108,103 @@ if ($age < 18) {
 $score = 85;
 $result = ($score >= 50) ? 'Đậu' : 'Rớt';
 echo "Kết quả thi: $result" . '<br>';
+
+
+// switch case
+$day = 2;
+switch ($day) {
+    case 2:
+        echo 'Thứ Hai' . '<br>';
+        break;
+    case 3:
+        echo 'Thứ Ba' . '<br>';
+        break;
+    case 4:
+        echo 'Thứ Tư' . '<br>';
+        break;
+    case 5:
+        echo 'Thứ Năm' . '<br>';
+        break;
+    case 6:
+        echo 'Thứ Sáu' . '<br>';
+        break;
+    case 7:
+        echo 'Thứ Bảy' . '<br>';
+        break;
+    case 8:
+        echo 'Chủ Nhật' . '<br>';
+        break;
+    default:
+        echo 'Ngày không hợp lệ' . '<br>';
+        break;
+}
+
+
+// vòng lặp for
+for ($i = 1; $i <= 5; $i++) {
+    echo "Lần lặp thứ: $i" . '<br>';
+}
+
+for ($i = 1; $i <= 5; $i++) {
+    echo "Đạt quá đẹp trai" . '<br>';
+}
+
+for ($i = 10; $i > 0; $i --){
+    echo "Đếm ngược: $i" . '<br>';
+    if ($i == 5) {
+        echo "Đã tìm thấy số 5" . '<br>'; 
+        break;
+    }
+}
+
+
+// vòng lặp while
+$j = 1;
+while ($j <= 5) {
+    echo "Lần lặp thứ: $j" . '<br>';
+    $j++;
+}
+
+while (true) {
+    echo "Vòng lặp vô hạn" . '<br>';
+    break;
+}
+
+
+// vòng lặp do while
+$k = 1;
+do {
+    echo "Lần lặp thứ: $k" . '<br>';
+    $k++;
+} while ($k <= 5);
+// do {
+//     echo "Vòng lặp do while ít nhất chạy một lần" . '<br>';
+// } while (false);
+
+
+// vòng lặp foreach
+$array = ['x', 'y', 'z'];
+foreach ($array as $item) {
+    echo "Giá trị: $item" . '<br>';
+}
+
+foreach ($array as $key => $value) {
+    echo "Chỉ mục: $key, Giá trị: $value" . '<br>';
+}
+
+
+// hàm trong php
+function greet($name) {
+    return "Xin chào, $name!" . '<br>';
+}
+echo greet('Đạt');
+
+
+function sum($a, $b) 
+{
+    $result = $a + $b;
+    echo $result . '<br>';
+};
+echo sum(3, 5);
+
 ?>
