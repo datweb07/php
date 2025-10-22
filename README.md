@@ -11,12 +11,12 @@
 ## Mục Tiêu Học Tập
 
 - [x] Cú pháp cơ bản của PHP
-- [ ] Lập trình hướng đối tượng (OOP)
-- [ ] Làm việc với cơ sở dữ liệu MySQL
-- [ ] Xây dựng RESTful API
-- [ ] Framework Laravel
-- [ ] Bảo mật web và xử lý session
-- [ ] Dự án thực tế
+- [x] Lập trình hướng đối tượng (OOP)
+- [x] Làm việc với cơ sở dữ liệu MySQL
+- [x] Xây dựng RESTful API
+- [x] Framework Laravel
+- [x] Bảo mật web và xử lý session
+- [x] Dự án thực tế
 
 ## Công Nghệ Sử Dụng
 
@@ -39,11 +39,6 @@
 ## Đóng Góp
 
 Đây là repository học tập cá nhân, nhưng mọi góp ý và gợi ý đều được hoan nghênh! Feel free to contact me.
-
-## 📞 Liên Hệ
-
-- GitHub: [@datweb07](https://github.com/datweb07)
-- Email: dat82770@gmail.com
 
 ---
 
