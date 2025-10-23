@@ -207,4 +207,44 @@ function sum($a, $b)
 };
 echo sum(3, 5);
 
+
+// hàm có giá trị trả về
+function multiply($a, $b) {
+    return $a * $b;
+}
+$product = multiply(4, 6);
+echo "Tích của 4 và 6 là: $product" . '<br>';
+
+// tham trị: mặc định giá trị ban đầu của tham số truyền vào hàm sẽ không bị thay đổi bên ngoài hàm
+function increment($num) {
+    $num++;
+    return $num;
+}
+$value = 10;
+$newValue = increment($value);
+echo "Giá trị ban đầu: $value" . '<br>'; // 10
+echo "Giá trị sau khi gọi hàm: $newValue" . '<br>'; // 11
+// tham chiếu: sử dụng ký tự & trước tên tham số, muốn thay đổi giá trị của biến trong quá trình xử lý hàm
+function addFive(&$num) {
+    $num += 5;
+}
+$number = 10;
+addFive($number);
+echo "Giá trị sau khi gọi hàm tham chiếu: $number" . '<br>'; // 15
+
+
+
+// hàm ẩn danh (anonymous function)
+$sayHello = function($name) {
+    return "Xin chào, $name!" . '<br>';
+};
+echo $sayHello('Dat');
+
+
+
+// hàm mũi tên (arrow function) - PHP 7.4 trở lên
+$sayHi = fn($name) => "Xin chào, $name!" . '<br>';
+echo $sayHi('Dat');
+
+
 ?>
