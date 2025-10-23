@@ -1,14 +1,8 @@
 # Học PHP
 
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![Status](https://img.shields.io/badge/status-learning-yellow?style=for-the-badge)
-![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
-
-## Giới Thiệu
-
 Đây là repository cá nhân của tôi để ghi chú và lưu trữ các dự án trong quá trình tự học PHP. Mục tiêu là xây dựng nền tảng vững chắc về PHP và phát triển web backend.
 
-## Mục Tiêu Học Tập
+## Mục Tiêu
 
 - [x] Cú pháp cơ bản của PHP
 - [x] Lập trình hướng đối tượng (OOP)
