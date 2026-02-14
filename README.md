@@ -1,16 +1,6 @@
 # Học PHP
 
-Đây là repository cá nhân của tôi để ghi chú và lưu trữ các dự án trong quá trình tự học PHP. Mục tiêu là xây dựng nền tảng vững chắc về PHP và phát triển web backend.
-
-## Mục Tiêu
-
-- [x] Cú pháp cơ bản của PHP
-- [x] Lập trình hướng đối tượng (OOP)
-- [x] Làm việc với cơ sở dữ liệu MySQL
-- [x] Xây dựng RESTful API
-- [x] Framework Laravel
-- [x] Bảo mật web và xử lý session
-- [x] Dự án thực tế
+Đây là repository cá nhân của tôi để ghi chú và lưu trữ các dự án trong quá trình tự học PHP
 
 ## Công Nghệ Sử Dụng
 
@@ -33,6 +23,4 @@
 
 ---
 
-⭐ **Star repo này nếu bạn thấy hữu ích cho việc học tập!**
-
-*Cập nhật lần cuối: October 2025*
+*Cập nhật lần cuối: February 2026*
