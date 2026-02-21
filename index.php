@@ -251,6 +251,47 @@ echo $sayHello('Dat');
 $sayHi = fn($name) => "Xin chào, $name!" . '<br>';
 echo $sayHi('Dat');
 
+
+
+// biến toàn cục: dùng trong toàn bộ chương trình
+
+$name = 'dat';
+function display()
+{
+    global $name;
+    echo $name . '<br>';
+}
+
+display();
+
+
+
+// biến cục bộ: dùng trong một hàm hoặc một khối lệnh
+
+function getAll(){
+    $h = 8;
+    echo $h . '<br>';
+}
+
+getAll();
+
+
+
+// biến static: lưu lại giá trị của biến sau mỗi lần gọi hàm
+
+
+function Inc(){
+    static $a = 9;
+    $a++;
+    echo $a . '<br>';
+}
+
+Inc();
+Inc();
+Inc();
+
+
+
 // lập trình hướng đối tượng
 class User
 {
