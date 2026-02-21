@@ -292,6 +292,46 @@ Inc();
 
 
 
+
+// hàm isset: kiếm tra biến đó có tồn tại hay không, return true hoặc false
+
+echo isset($love) . '<br>';  // không trả về gì hết
+echo isset($name) . '<br>';     // return 1
+
+var_dump(isset($love));    // return false
+echo '<br>';
+
+
+var_dump(isset($name));    // return true
+echo '<br>';
+
+
+$a = (isset($name)) ? 'tổn tại' : 'không tồn tại';
+echo $a . '<br>';   // return tồn tại
+
+
+$dat = null;
+echo empty($dat) . '<br>';   // return 1
+var_dump(empty($dat));  // return true
+echo '<br>';
+
+
+$loc = (empty($name)) ? 'không có giá trị' : 'có giá trị';
+echo $loc . '<br>';
+
+if (isset($name)){
+    if (empty($name)){
+        echo 'Tồn tại biến name và không có giá trị' . '<br>';
+    }
+    else{
+        echo 'Tồn tại biến name và có giá trị' . '<br>';
+    }
+}
+else{
+    echo 'Không tồn tại biến name' . '<br>';
+}
+
+
 // lập trình hướng đối tượng
 class User
 {
