@@ -59,7 +59,7 @@ echo "Lũy thừa $i mũ $j là: " . ($i ** $j) . '<br>';  // 2^3
 
 // toán tử gán
 $k = 10;
-$k += 5; 
+$k += 5;
 $k -= 2;
 $k *= 3;
 $k /= 3;
@@ -149,10 +149,10 @@ for ($i = 1; $i <= 5; $i++) {
     echo "Đạt quá đẹp trai" . '<br>';
 }
 
-for ($i = 10; $i > 0; $i --){
+for ($i = 10; $i > 0; $i--) {
     echo "Đếm ngược: $i" . '<br>';
     if ($i == 5) {
-        echo "Đã tìm thấy số 5" . '<br>'; 
+        echo "Đã tìm thấy số 5" . '<br>';
         break;
     }
 }
@@ -194,29 +194,33 @@ foreach ($array as $key => $value) {
 
 
 // hàm trong php
-function greet($name) {
+function greet($name)
+{
     return "Xin chào, $name!" . '<br>';
 }
 echo greet('Đạt');
 
 
-function sum($a, $b) 
+function sum($a, $b)
 {
     $result = $a + $b;
     echo $result . '<br>';
-};
+}
+;
 echo sum(3, 5);
 
 
 // hàm có giá trị trả về
-function multiply($a, $b) {
+function multiply($a, $b)
+{
     return $a * $b;
 }
 $product = multiply(4, 6);
 echo "Tích của 4 và 6 là: $product" . '<br>';
 
 // tham trị: mặc định giá trị ban đầu của tham số truyền vào hàm sẽ không bị thay đổi bên ngoài hàm
-function increment($num) {
+function increment($num)
+{
     $num++;
     return $num;
 }
@@ -225,7 +229,8 @@ $newValue = increment($value);
 echo "Giá trị ban đầu: $value" . '<br>'; // 10
 echo "Giá trị sau khi gọi hàm: $newValue" . '<br>'; // 11
 // tham chiếu: sử dụng ký tự & trước tên tham số, muốn thay đổi giá trị của biến trong quá trình xử lý hàm
-function addFive(&$num) {
+function addFive(&$num)
+{
     $num += 5;
 }
 $number = 10;
@@ -235,7 +240,7 @@ echo "Giá trị sau khi gọi hàm tham chiếu: $number" . '<br>'; // 15
 
 
 // hàm ẩn danh (anonymous function)
-$sayHello = function($name) {
+$sayHello = function ($name) {
     return "Xin chào, $name!" . '<br>';
 };
 echo $sayHello('Dat');
@@ -246,5 +251,19 @@ echo $sayHello('Dat');
 $sayHi = fn($name) => "Xin chào, $name!" . '<br>';
 echo $sayHi('Dat');
 
-
+// lập trình hướng đối tượng
+class User
+{
+    public string $name;
+    public int $age;
+    public function __construct(string $name, int $age)
+    {
+        $this->name = $name;
+        $this->age = $age;
+    }
+    public function introduce(): string
+    {
+        return "Xin chào, tôi là {$this->name}, {$this->age} tuổi." . '<br>';
+    }
+}
 ?>
