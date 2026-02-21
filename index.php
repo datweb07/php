@@ -268,7 +268,8 @@ display();
 
 // biến cục bộ: dùng trong một hàm hoặc một khối lệnh
 
-function getAll(){
+function getAll()
+{
     $h = 8;
     echo $h . '<br>';
 }
@@ -280,7 +281,8 @@ getAll();
 // biến static: lưu lại giá trị của biến sau mỗi lần gọi hàm
 
 
-function Inc(){
+function Inc()
+{
     static $a = 9;
     $a++;
     echo $a . '<br>';
@@ -319,17 +321,26 @@ echo '<br>';
 $loc = (empty($name)) ? 'không có giá trị' : 'có giá trị';
 echo $loc . '<br>';
 
-if (isset($name)){
-    if (empty($name)){
+if (isset($name)) {
+    if (empty($name)) {
         echo 'Tồn tại biến name và không có giá trị' . '<br>';
-    }
-    else{
+    } else {
         echo 'Tồn tại biến name và có giá trị' . '<br>';
     }
-}
-else{
+} else {
     echo 'Không tồn tại biến name' . '<br>';
 }
+
+
+
+// INCLUDE, INCLUDE_ONCE, REQUIRE, REQUIRE_ONCE: nhúng file
+
+include './support.php';    // nhúng nhiều lần
+include_once './support.php';  // chỉ nhúng một lần, nếu có nhúng lại sẽ không có tác dụng gì
+
+require './support.php';    // gặp lỗi thì dừng chương trình
+require_once './support.php';
+echo $support . '<br>';  
 
 
 // lập trình hướng đối tượng
