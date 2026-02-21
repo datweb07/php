@@ -31,4 +31,32 @@ echo $people['name'] . '<br>';
 foreach ($people as $key => $value){
     echo $key . ' ' . '<br>';
 }
+
+
+
+// mảng đa chiều
+$brand = [
+    'asus' => ['tuf', 'vivobook', 'zenbook'], 
+    'apple' => ['macbook', 'iphone'], 
+    'lenovo' => ['loq', 'legion'],
+    ];
+var_dump($brand['asus']);
+echo '<br>';
+
+
+var_dump($brand['asus'][0]);
+echo '<br>';
+
+foreach ($brand as $key => $value){
+    var_dump($key);
+}
+echo '<br>';
+
+
+foreach ($brand as $key => $value){
+    echo "Hãng $key gồm: " . '<br>';
+    foreach ($value as $i){
+        echo $i . '<br>';
+    }
+}
 ?>
