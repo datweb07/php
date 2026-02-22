@@ -70,4 +70,20 @@ $casecmp = strcasecmp($h, $j);          // so sánh hai chuỗi (không phân bi
 $cmp = strcmp($h, $j);                  // so sánh hai chuỗi (có phân biệt chữ hoa, chữ thường)
 echo $casecmp . '<br>';
 echo $cmp . '<br>';
+
+
+ // mã hóa chuỗi
+$encrypt = 'toi yeu ban';
+
+$md5 = md5($encrypt);       
+echo 'md5: ' . $md5 . '<br>';
+
+$sha1 = sha1($encrypt);       
+echo 'sha1: ' . $sha1 . '<br>';
+
+$encode = base64_encode($encrypt);          // encode: mã hóa
+echo 'encode: ' . $encode . '<br>';
+
+$decode = base64_decode($encode);           // decode: giải mã
+echo 'decode: ' . $decode . '<br>';
 ?>  
