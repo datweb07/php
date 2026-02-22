@@ -1,5 +1,6 @@
 <?php
-
+// $_REQUEST là biến siêu toàn cục, tổng hợp data từ $_POST, $_GET, $COOKIE
+// $_SESSION là biến siêu toàn cục
 ?>
 
 <style>
@@ -26,3 +27,5 @@
     <input type="password" name="password" placeholder="Mật khẩu">
     <button type="submit">Đăng ký</button>
 </form>
+
+
