@@ -13,7 +13,7 @@
 //     echo '<pre>';
 // }
 
-if (!empty($_REQUEST)){
+if (!empty($_REQUEST)) {
     echo '<pre>';
     print_r($_REQUEST);
     echo '<pre>';
@@ -29,57 +29,54 @@ $error_email = "";
 $password = "";
 $error_password = "";
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // kiểm tra họ tên
-    if (empty($_POST['fullname'])){
+    if (empty($_POST['fullname'])) {
         $error_fullname = "Tên không được để trống";
     } else {
         $fullname = htmlspecialchars(trim($_POST['fullname']));
     }
 
     // kiểm tra email
-    if (empty($_POST['email'])){
+    if (empty($_POST['email'])) {
         $error_email = "Email không được để trống";
-    }else {
-        if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+    } else {
+        if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
             $error_email = "Email không đúng định dạng";
-        }
-        else{
+        } else {
             $email = htmlspecialchars(trim($_POST['email']));
         }
     }
 
 
     // kiểm tra password
-    if (empty($_POST['password'])){
+    if (empty($_POST['password'])) {
         $error_password = "Mật khẩu không được để trống";
-    }
-    else {
-        if (strlen($_POST['password']) < 6){
+    } else {
+        if (strlen($_POST['password']) < 6) {
             $error_password = "Mật khẩu phải chứa 6 ký tự";
-        }
-        else {
+        } else {
             $password = sha1(trim($_POST['password']));
         }
     }
 
     // in ra
-    if ($error_fullname == ""){
+    if ($error_fullname == "") {
         echo 'Tên hợp lệ: ' . $fullname . '<br>';
-    }else {
+    } else {
         echo $error_fullname . '<br>';
     }
 
-    if ($error_email == ""){
+    if ($error_email == "") {
         echo 'Email hợp lệ: ' . $email . '<br>';
-    }else {
+    } else {
         echo $error_email . '<br>';
     }
 
 
-    if ($error_password == ""){
+    if ($error_password == "") {
         echo 'Mật khẩu hợp lệ: ' . $password . '<br>';
-    }else {
+    } else {
         echo $error_password . '<br>';
     }
 }

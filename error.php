@@ -8,15 +8,15 @@ Notice: nhắc nhở
 Exception (Exception error) --> dùng try-catch
 */
 
-try{
+try {
     $age = -20;
-    if ($age < 0){
+    if ($age < 0) {
         throw new Exception("Tuổi không thể âm");
     }
     echo 'Tuổi hợp lệ: ' . $age;
+} catch (Exception $e) {
+    echo 'Có lỗi: ' . $e->getMessage();
 }
-catch (Exception $e){
-    echo 'Có lỗi: ' . $e -> getMessage();
-};
+;
 
 ?>

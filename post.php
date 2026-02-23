@@ -4,19 +4,20 @@
 ?>
 
 <style>
-    body{
+    body {
         margin: 0;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    form{
+
+    form {
         display: flex;
         flex-direction: column;
         width: 50%;
     }
 
-    form input{
+    form input {
         margin-bottom: 8px;
     }
 </style>
@@ -27,5 +28,3 @@
     <input type="password" name="password" placeholder="Mật khẩu">
     <button type="submit">Đăng ký</button>
 </form>
-
-

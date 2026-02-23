@@ -72,13 +72,13 @@ echo $casecmp . '<br>';
 echo $cmp . '<br>';
 
 
- // mã hóa chuỗi
+// mã hóa chuỗi
 $encrypt = 'toi yeu ban';
 
-$md5 = md5($encrypt);       
+$md5 = md5($encrypt);
 echo 'md5: ' . $md5 . '<br>';
 
-$sha1 = sha1($encrypt);       
+$sha1 = sha1($encrypt);
 echo 'sha1: ' . $sha1 . '<br>';
 
 $encode = base64_encode($encrypt);          // encode: mã hóa
@@ -86,4 +86,4 @@ echo 'encode: ' . $encode . '<br>';
 
 $decode = base64_decode($encode);           // decode: giải mã
 echo 'decode: ' . $decode . '<br>';
-?>  
+?>

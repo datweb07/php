@@ -3,7 +3,7 @@
 // $_GET
 
 
-if (!empty($_GET)){
+if (!empty($_GET)) {
     echo 'get';
     echo '<pre>';
     print_r($_GET);

@@ -9,7 +9,7 @@ session_start();        // bắt buộc có
 
 // $_SESSION['dat'] = 'Học PHP';   // tạo session có tên là dat
 unset($_SESSION['dat']);
-if (isset($_SESSION['dat'])){
+if (isset($_SESSION['dat'])) {
     echo $_SESSION['dat'];
 }
 

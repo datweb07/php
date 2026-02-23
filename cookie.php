@@ -18,7 +18,7 @@ httponly: ngăn chặn js và tăng cường bảo mật
 
 // setcookie('dat', '99', time() + 2000);
 
-if (isset($_COOKIE)){
+if (isset($_COOKIE)) {
     echo '<pre>';
     print_r($_COOKIE);
     echo '<pre>';
