@@ -398,18 +398,30 @@ try {
         // );
 
         // update
-        $sql = "UPDATE users SET name = :name WHERE id = :id";
+        // $sql = "UPDATE users SET name = :name WHERE id = :id";
+        // $stm = $conn -> prepare($sql);
+
+        // $name = 'DAT';
+        // $id = 4;  
+
+        // $stm -> execute(
+        //     [
+        //         ':name' => $name,
+        //         ':id' => $id
+        //     ]
+        // );
+
+
+        // delete
+        $sql = "DELETE FROM users WHERE id = :id";
+
         $stm = $conn -> prepare($sql);
 
-        $name = 'DAT';
-        $id = 4;  
+        $id = 4;
 
-        $stm -> execute(
-            [
-                ':name' => $name,
-                ':id' => $id
-            ]
-        );
+        $stm -> execute([
+            ':id' => $id
+        ]);
     }
 } catch (Exception $ex) {
     echo 'Lỗi kết nối: ' . $ex->getMessage();
