@@ -358,4 +358,27 @@ class User
         return "Xin chào, tôi là {$this->name}, {$this->age} tuổi." . '<br>';
     }
 }
+
+
+
+$host = 'localhost';
+$dbname = 'db_users';
+$user_db = 'root';
+$password = '123456';
+
+try {
+    if (class_exists('PDO')) {
+        $options = array(
+            PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",       // sử dụng tiếng việt
+            PDO::ATTR_ERRMODE,
+            PDO::ERRMODE_EXCEPTION,              // đẩy ngoại lệ vào exception
+        );
+        $conn = new PDO("mysql:host=$host; dbname=$dbname", $user_db, $password, $options);
+        var_dump($conn);
+        echo '<br>';
+        echo "Kết nối thành công";
+    }
+} catch (Exception $ex) {
+    echo 'Lỗi kết nối: ' . $ex->getMessage();
+}
 ?>
