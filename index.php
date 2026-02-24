@@ -413,15 +413,30 @@ try {
 
 
         // delete
-        $sql = "DELETE FROM users WHERE id = :id";
+        // $sql = "DELETE FROM users WHERE id = :id";
+
+        // $stm = $conn -> prepare($sql);
+
+        // $id = 4;
+
+        // $stm -> execute([
+        //     ':id' => $id
+        // ]);
+
+
+        // query
+        $sql = "SELECT * FROM users";
 
         $stm = $conn -> prepare($sql);
 
-        $id = 4;
+        $stm -> execute();
 
-        $stm -> execute([
-            ':id' => $id
-        ]);
+        $result = $stm->fetch(PDO::FETCH_ASSOC);        // Lấy 1 dòng dữ liệu từ kết quả truy vấn dưới dạng mảng associative (key là tên cột)
+
+        echo '<pre>';
+        print_r($result);
+        echo '<pre>';
+
     }
 } catch (Exception $ex) {
     echo 'Lỗi kết nối: ' . $ex->getMessage();
