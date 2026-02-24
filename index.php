@@ -377,22 +377,37 @@ try {
         // echo '<br>';
         echo "Kết nối thành công";
 
-        $sql = "INSERT INTO users (name, email, phone, address) VALUES (:name, :email, :phone, :address)";        // :name: placeholder
+        // insert
+        // $sql = "INSERT INTO users (name, email, phone, address) VALUES (:name, :email, :phone, :address)";        // :name: placeholder
 
-        $stm = $conn -> prepare($sql);      // bảo vệ khỏi tấn công như SQL Injection
+        // $stm = $conn -> prepare($sql);      // bảo vệ khỏi tấn công như SQL Injection
 
-        $name = 'admin';
-        $email = 'admin@gmail.com';
-        $phone = '123';
-        $address = 'VN';
+        // $name = 'admin';
+        // $email = 'admin@gmail.com';
+        // $phone = '123';
+        // $address = 'VN';
 
-        // thực thi 
+        // // thực thi 
+        // $stm -> execute(
+        //     [
+        //         ':name' => $name,
+        //         ':email' => $email,
+        //         ':phone' => $phone,
+        //         ':address' => $address
+        //     ]
+        // );
+
+        // update
+        $sql = "UPDATE users SET name = :name WHERE id = :id";
+        $stm = $conn -> prepare($sql);
+
+        $name = 'DAT';
+        $id = 4;  
+
         $stm -> execute(
             [
                 ':name' => $name,
-                ':email' => $email,
-                ':phone' => $phone,
-                ':address' => $address
+                ':id' => $id
             ]
         );
     }
