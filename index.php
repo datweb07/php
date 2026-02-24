@@ -370,8 +370,7 @@ try {
     if (class_exists('PDO')) {
         $options = array(
             PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",       // sử dụng tiếng việt
-            PDO::ATTR_ERRMODE,
-            PDO::ERRMODE_EXCEPTION,              // đẩy ngoại lệ vào exception
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,              // đẩy ngoại lệ vào exception
         );
         $conn = new PDO("mysql:host=$host; dbname=$dbname", $user_db, $password, $options);
         var_dump($conn);
