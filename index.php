@@ -373,9 +373,28 @@ try {
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,              // đẩy ngoại lệ vào exception
         );
         $conn = new PDO("mysql:host=$host; dbname=$dbname", $user_db, $password, $options);
-        var_dump($conn);
-        echo '<br>';
+        // var_dump($conn);
+        // echo '<br>';
         echo "Kết nối thành công";
+
+        $sql = "INSERT INTO users (name, email, phone, address) VALUES (:name, :email, :phone, :address)";        // :name: placeholder
+
+        $stm = $conn -> prepare($sql);      // bảo vệ khỏi tấn công như SQL Injection
+
+        $name = 'admin';
+        $email = 'admin@gmail.com';
+        $phone = '123';
+        $address = 'VN';
+
+        // thực thi 
+        $stm -> execute(
+            [
+                ':name' => $name,
+                ':email' => $email,
+                ':phone' => $phone,
+                ':address' => $address
+            ]
+        );
     }
 } catch (Exception $ex) {
     echo 'Lỗi kết nối: ' . $ex->getMessage();
