@@ -343,21 +343,6 @@ require_once './support.php';
 echo $support . '<br>';
 
 
-// lập trình hướng đối tượng
-class User
-{
-    public string $name;
-    public int $age;
-    public function __construct(string $name, int $age)
-    {
-        $this->name = $name;
-        $this->age = $age;
-    }
-    public function introduce(): string
-    {
-        return "Xin chào, tôi là {$this->name}, {$this->age} tuổi." . '<br>';
-    }
-}
 
 
 
@@ -441,4 +426,36 @@ try {
 } catch (Exception $ex) {
     echo 'Lỗi kết nối: ' . $ex->getMessage();
 }
+
+
+
+// lập trình hướng đối tượng
+class User
+{
+    public string $name;
+    public int $age;
+    public function __construct(string $name, int $age)
+    {
+        $this->name = $name;
+        $this->age = $age;
+    }
+    public function introduce(): string
+    {
+        return "Xin chào, tôi là {$this->name}, {$this->age} tuổi." . '<br>';
+    }
+}
+
+class Car {
+    public string $brand;
+    public string $color;
+
+    public function info($brand, $color){
+        echo "Brand: " . $this -> $brand = $brand . ", Color: " . $this -> $color = $brand;
+    }
+}
+
+$car1 = new Car();
+
+$car1 -> info("Toyota", "Red");
+
 ?>
