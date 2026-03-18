@@ -17,6 +17,10 @@ class vehicle{
 class Car extends vehicle{
     public $model;
 
+     public function index(){
+        echo 'Oke...' . '<br>';
+    }
+
     public function setModel($model){
         $this -> model = $model;
     }
@@ -31,7 +35,7 @@ $myCar = new Car();
 $myCar -> setBrand('Toyota');
 $myCar -> setModel('TY - 1990');
 
-$myCar -> index();
+$myCar -> index();          //ghi đè phương thức của class cha (Vehicle)
 $myCar -> getInfo();
 
 
