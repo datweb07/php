@@ -1,12 +1,14 @@
 <?php
 
-class UsersController{
+class UsersController extends BaseController{
     public function index(){
         $user = new User();
 
         $userDetail = $user -> getAllUsers();
 
-        require_once 'app/Views/users.php';
+  
+
+        $this -> renderView('users', $userDetail);
         
     }
 }
