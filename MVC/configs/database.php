@@ -1,5 +1,5 @@
 <?php
-
+echo 'database';
 require_once 'configs/config.php';
 
 class Database
