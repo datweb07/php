@@ -1,6 +1,5 @@
 <footer class="app-footer">
-    <div class="float-end d-none d-sm-inline">XYZ</div>
     <strong>
-        Copyright &copy; 2024 <a href="https://adminlte.io" class="text-decoration-none">XYZ</a>. All rights reserved.
+        Hệ thống quản trị khoá học Copyright &copy; 2019-2025 <a href="https://hienu.vn" class="text-decoration-none">Hienu.vn</a>. All rights reserved.
     </strong>
 </footer>

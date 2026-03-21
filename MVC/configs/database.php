@@ -1,5 +1,4 @@
 <?php
-echo 'database';
 require_once 'configs/config.php';
 
 class Database
@@ -15,7 +14,6 @@ class Database
                 );
                 $dsn = _DRIVER . ':host=' . _HOST . '; dbname=' . _DB;
                 self::$conn = new PDO($dsn, _USER, _PASS, $options);
-                echo "Successful database connection" . '<br>';
 
 
             }

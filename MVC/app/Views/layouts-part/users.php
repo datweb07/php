@@ -2,9 +2,9 @@
     <thead>
         <tr>
             <th>STT</th>
-            <th>Họ Tên</th>
+            <th>Họ tên</th>
             <th>Email</th>
-            <th>Ngày Tạo</th>
+            <th>Ngày tạo</th>
         </tr>
     </thead>
 

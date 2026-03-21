@@ -1,5 +1,4 @@
 <?php
-echo 'config';
 // thiết lập database
 const _HOST = 'localhost';
 const _DB = 'db_manager';
