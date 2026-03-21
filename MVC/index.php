@@ -8,6 +8,13 @@ foreach (glob(__DIR__ . '/core/*.php') as $filename){
     require_once $filename;
 }
 
+$router = new Router();
+
+foreach (glob(__DIR__ . '/routers/*.php') as $filename){
+    require_once $filename;
+}
+
+
 foreach (glob(__DIR__ . '/app/Models/*.php') as $filename){
     require_once $filename;
 }
@@ -15,6 +22,9 @@ foreach (glob(__DIR__ . '/app/Models/*.php') as $filename){
 foreach (glob(__DIR__ . '/app/Controllers/*.php') as $filename){
     require_once $filename;
 }
+
+
+
 
 $user = new UsersController();
 $user -> index();
