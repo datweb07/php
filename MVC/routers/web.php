@@ -1,11 +1,8 @@
 <?php
 
-$router -> get('/users', 'UserController@index');
+$router -> get('/users', 'UsersController@index');
 
-$router -> post('/users', 'UserController@index');
+$router -> post('/users', 'UsersController@index');
 
-echo '<pre>';
-print_r($router -> getRoute());
-echo '<pre>';
 
 ?>
